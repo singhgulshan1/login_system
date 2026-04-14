@@ -12,7 +12,7 @@ app.config['MYSQL_DB']       = os.environ.get('MYSQL_DB', 'employee_crm')
 
 mysql = MySQL(app)
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     error = None
